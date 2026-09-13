@@ -1,0 +1,92 @@
+{
+  "name": "@goya24/react-native",
+  "version": "0.1.0",
+  "description": "The goya24 support messenger inside a React Native app: one component over react-native-webview, with a proven signed-in user and a close signal.",
+  "license": "MIT",
+  "author": "Goya24",
+  "homepage": "https://github.com/Goya-24/goya24-react-native#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goya-24/goya24-react-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Goya-24/goya24-react-native/issues"
+  },
+  "keywords": [
+    "goya24",
+    "react-native",
+    "expo",
+    "customer-support",
+    "chat",
+    "messenger",
+    "webview",
+    "persian"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "react-native": "./src/index.ts",
+  "exports": {
+    ".": {
+      "react-native": "./src/index.ts",
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "publish:check": "publint --strict"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.73",
+    "react-native-webview": ">=13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-test-renderer": "^18.3.1",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "publint": "^0.3.2",
+    "react": "^18.3.1",
+    "react-native": "^0.76.5",
+    "react-native-webview": "^13.12.5",
+    "react-test-renderer": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vitest": "^2.1.8"
+  }
+}
